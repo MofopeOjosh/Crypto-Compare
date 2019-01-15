@@ -59,6 +59,7 @@ let app = new Vue({
      	symbol = (symbol === "MIOTA" ? "IOT" : symbol);
       symbol = (symbol === "VERI" ? "VRM" : symbol);
 //      	return CRYPTOCOMPARE_API_URI + this.coinData[symbol].ImageUrl;
+	     console.log(this.coinData.symbol);
      	return 'no imagge';
      },
 
