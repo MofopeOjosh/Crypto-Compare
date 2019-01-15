@@ -58,7 +58,9 @@ let app = new Vue({
      	// return this.coinData.symbol[symbol];
      	symbol = (symbol === "MIOTA" ? "IOT" : symbol);
       symbol = (symbol === "VERI" ? "VRM" : symbol);
-     	return CRYPTOCOMPARE_API_URI + this.coinData.symbol[symbol].ImageUrl;
+	     console.log(this.coinData);
+//      	return CRYPTOCOMPARE_API_URI + this.coinData.symbol[symbol].ImageUrl;
+	     return 'app';
      },
 
      /**
