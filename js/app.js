@@ -12,7 +12,7 @@ let app = new Vue({
 	data: {
 		coins: [],
 		coinData: {},
-		imageUrl: CRYPTOCOMPARE_API_URI,
+		imagePath: CRYPTOCOMPARE_API_URI,
 	},
 	methods: {
 		/**
