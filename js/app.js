@@ -11,7 +11,8 @@ let app = new Vue({
 	el: "#app",
 	data: {
 		coins: [],
-		coinData: {}
+		coinData: {},
+		imageUrl: CRYPTOCOMPARE_API_URI,
 	},
 	methods: {
 		/**
@@ -23,6 +24,7 @@ let app = new Vue({
      	axios.get(CRYPTOCOMPARE_API_URI + "/api/data/coinlist")
      	.then((resp) => {
      		this.coinData = resp.data.Data;
+		console.log(this.coinData);
      		this.getCoins();
      	})
      	.catch((err) => {
@@ -52,16 +54,16 @@ let app = new Vue({
      /**
      * Given a cryptocurrency ticket symbol, return the currency's logo
      * image.
-     */
+//      */
 
-     getCoinImage: function(symbol){
-     	// return this.coinData.symbol[symbol];
-     	symbol = (symbol === "MIOTA" ? "IOT" : symbol);
-      symbol = (symbol === "VERI" ? "VRM" : symbol);
-	     console.log(this.coinData);
-//      	return CRYPTOCOMPARE_API_URI + this.coinData.symbol[symbol].ImageUrl;
-	     return 'app';
-     },
+//      getCoinImage: function(symbol){
+//      	// return this.coinData.symbol[symbol];
+//      	symbol = (symbol === "MIOTA" ? "IOT" : symbol);
+//       symbol = (symbol === "VERI" ? "VRM" : symbol);
+// 	     console.log(this.coinData);
+// //      	return CRYPTOCOMPARE_API_URI + this.coinData.symbol[symbol].ImageUrl;
+// 	     return 'app';
+//      },
 
      /**
 	 * Return a CSS color (either red or green) depending on whether or
