@@ -45,7 +45,7 @@
     		<tbody>
     			<tr v-for="coin in coins">
     				<td>{{ coin.rank }} </td>
-    				<td><img v-bind:src="getCoinImage(coin.symbol)"> {{ coin.name }}</td>
+    				<td v-if="coinData"><img v-bind:src="imagePath+this.coinData[symbol].ImageUrl"> {{ coin.name }}</td>
     				<td>{{ coin.symbol }} </td>
     				<td v-bind:style="getColor(coin.percent_change_1h)">
     					<span v-if="coin.percent_change_1h > 0">+</span>{{coin.percent_change_1h}}%
